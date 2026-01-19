@@ -21,8 +21,7 @@ const ResourcesPage: React.FC = () => {
     );
   }, [selectedTopic]);
 
-  // Extract all unique topics
-  const allTopics = Array.from(new Set(resources.flatMap(r => r.topics || [])));
+
 
   return (
     <div>
@@ -39,28 +38,26 @@ const ResourcesPage: React.FC = () => {
       </section>
 
       {/* Topics Filter */}
-      <section className="bg-bg-default border-b border-gray-100 sticky top-0 z-20 shadow-sm">
-        <div className="container mx-auto px-4 py-4 overflow-x-auto">
-          <div className="flex flex-nowrap md:flex-wrap md:justify-center gap-2 pb-2 md:pb-0">
-            <button
-              onClick={() => setSelectedTopic('all')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${selectedTopic === 'all'
-                ? 'bg-primary text-text-inverted'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-            >
-              All Topics
-            </button>
-            {allTopics.map(topic => (
+      <section className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-30 shadow-sm backdrop-blur-md bg-white/90 dark:bg-gray-900/90 supports-[backdrop-filter]:bg-white/60">
+        <div className="container mx-auto px-4 py-4 overflow-x-auto hide-scrollbar">
+          <div className="flex flex-nowrap md:justify-center gap-3 min-w-max px-2">
+            {[
+              { id: 'all', label: 'All Topics' },
+              { id: "Women's Rights", label: "Women's Rights" },
+              { id: 'NRIs', label: 'NRI Property' },
+              { id: 'No Will / Intestate', label: 'No Will / Intestate' },
+              { id: 'Agricultural Land', label: 'Agricultural Land' },
+              { id: 'Court Judgments', label: 'Court Judgments' },
+            ].map((topic) => (
               <button
-                key={topic}
-                onClick={() => setSelectedTopic(topic)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${selectedTopic === topic
-                  ? 'bg-primary text-text-inverted'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                key={topic.id}
+                onClick={() => setSelectedTopic(topic.id)}
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 whitespace-nowrap border ${selectedTopic === topic.id
+                  ? 'bg-primary text-white border-primary shadow-md transform scale-105'
+                  : 'bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-300'
                   }`}
               >
-                {topic}
+                {topic.label}
               </button>
             ))}
           </div>
