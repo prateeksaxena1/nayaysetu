@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import Button from '../components/UI/Button';
 import ConsultationForm from '../components/UI/ConsultationForm';
-import CaseStudyCard from '../components/UI/CaseStudyCard';
+
 import TestimonialCard from '../components/UI/TestimonialCard';
 import ResourceCard from '../components/UI/ResourceCard';
 import TeamMemberCard from '../components/UI/TeamMemberCard';
 import InheritanceLawModal from '../components/UI/InheritanceLawModal';
 import IntellectualPropertyModal from '../components/UI/IntellectualPropertyModal';
 import HinduSuccessionModal from '../components/UI/HinduSuccessionModal';
-import { caseStudies } from '../data/caseStudies';
+
 import { testimonials } from '../data/testimonials';
 import { resources } from '../data/resources';
 import { team } from '../data/team';
@@ -18,12 +18,14 @@ import { practiceAreas } from '../data/practiceAreas';
 import { ArrowRight, Award, HeartHandshake, Sprout, Plane, Users } from 'lucide-react';
 import FadeIn from '../components/Animations/FadeIn';
 import StaggerChildren, { StaggerItem } from '../components/Animations/StaggerChildren';
+import CaseStudies from '../components/Sections/CaseStudies';
+import TrustStrip from '../components/UI/TrustStrip';
 
 import PracticeAreaCard from '../components/UI/PracticeAreaCard';
 
 import { faqs, FAQ } from '../data/faqs';
 import FAQAccordion from '../components/UI/FAQAccordion';
-import TrustStrip from '../components/UI/TrustStrip';
+
 import ReadyToTalk from '../components/UI/ReadyToTalk';
 
 const Home: React.FC = () => {
@@ -40,7 +42,7 @@ const Home: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const featuredCaseStudies = caseStudies.filter(cs => cs.featured);
+
   const featuredResources = resources.filter(r => r.featured);
   const featuredTeamMembers = team.filter(t => t.featured);
 
@@ -407,36 +409,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Case Studies */}
-      < section className="py-20 bg-bg-muted dark:bg-bg-dark" >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16">
-            <FadeIn fullWidth>
-              <h2 className="text-3xl font-bold text-primary dark:text-text-inverted mb-4">Featured Case Studies</h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
-                Explore some case studies and get to know how they overcome these challenges.
-              </p>
-            </FadeIn>
-            <FadeIn direction="left" delay={0.2}>
-              <Link
-                to="/case-studies"
-                className="text-primary font-medium inline-flex items-center hover:text-accent mt-4 md:mt-0"
-              >
-                View All Case Studies
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
-            </FadeIn>
-          </div>
-
-          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCaseStudies.map(caseStudy => (
-              <StaggerItem key={caseStudy.id}>
-                <CaseStudyCard caseStudy={caseStudy} />
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
-        </div>
-      </section >
+      <CaseStudies />
 
       {/* Why Choose Us - Split Layout */}
       <section className="py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
