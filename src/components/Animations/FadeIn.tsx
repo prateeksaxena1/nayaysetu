@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 interface FadeInProps {
     children: React.ReactNode;
@@ -18,19 +18,21 @@ const FadeIn: React.FC<FadeInProps> = ({
     className = '',
     fullWidth = true
 }) => {
+    const shouldReduceMotion = useReducedMotion();
+
     const variants = {
         hidden: {
             opacity: 0,
-            y: direction === 'up' ? 40 : direction === 'down' ? -40 : 0,
-            x: direction === 'left' ? 40 : direction === 'right' ? -40 : 0,
+            y: shouldReduceMotion ? 0 : (direction === 'up' ? 30 : direction === 'down' ? -30 : 0),
+            x: shouldReduceMotion ? 0 : (direction === 'left' ? 30 : direction === 'right' ? -30 : 0),
         },
         visible: {
             opacity: 1,
             y: 0,
             x: 0,
             transition: {
-                duration,
-                delay,
+                duration: shouldReduceMotion ? 0.3 : duration,
+                delay: shouldReduceMotion ? 0 : delay,
                 ease: "easeOut" as const
             }
         }
