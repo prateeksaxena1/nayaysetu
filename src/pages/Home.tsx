@@ -171,6 +171,7 @@ const Home: React.FC = () => {
             ].map((persona) => (
               <button
                 key={persona.id}
+                aria-label={`Scroll to ${persona.label} section`}
                 onClick={() => {
                   const element = document.getElementById(persona.id);
                   if (element) {
@@ -186,9 +187,9 @@ const Home: React.FC = () => {
                     });
                   }
                 }}
-                className="flex items-center px-6 py-3 rounded-full bg-bg-muted dark:bg-gray-800 hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-200 border-2 border-transparent hover:border-accent group"
+                className="flex items-center px-6 py-3 rounded-full bg-bg-muted dark:bg-gray-800 hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-200 border-2 border-transparent hover:border-accent group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
-                <span className="mr-2 text-xl group-hover:animate-pulse">{persona.icon}</span>
+                <span className="mr-2 text-xl group-hover:animate-pulse" aria-hidden="true">{persona.icon}</span>
                 <span className="font-medium text-primary dark:text-white">{persona.label}</span>
               </button>
             ))}

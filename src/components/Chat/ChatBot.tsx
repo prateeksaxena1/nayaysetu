@@ -263,15 +263,21 @@ const ChatBot: React.FC = () => {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-nayaysetu text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-nayaysetu/90 transition-colors transform hover:scale-105 active:scale-95"
+        className="bg-nayaysetu text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-nayaysetu/90 transition-colors transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-nayaysetu"
         aria-label={isOpen ? "Close Chat Assistant" : "Open Chat Assistant"}
         aria-expanded={isOpen}
+        aria-controls="chat-window"
       >
         {isOpen ? <X size={20} className="md:w-6 md:h-6" /> : <MessageSquare size={20} className="md:w-6 md:h-6" />}
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-16 right-0 w-[calc(100vw-2rem)] sm:w-[350px] md:w-96 bg-white rounded-lg shadow-xl overflow-hidden max-h-[80vh] flex flex-col border border-gray-200 dark:border-gray-700">
+        <div
+          id="chat-window"
+          role="dialog"
+          aria-label="Chat Assistant"
+          className="absolute bottom-16 right-0 w-[calc(100vw-2rem)] sm:w-[350px] md:w-96 bg-white rounded-lg shadow-xl overflow-hidden max-h-[80vh] flex flex-col border border-gray-200 dark:border-gray-700"
+        >
           <div className="bg-nayaysetu p-3 md:p-4 text-white">
             <h3 className="text-base md:text-lg font-semibold">
               {language === 'hi' ? 'कानूनी सहायक' : 'Legal Assistant'}
