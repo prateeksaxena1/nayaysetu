@@ -21,6 +21,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           <img
             src={imageUrl}
             alt={name}
+            loading="lazy"
             className="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105"
           />
         </div>
@@ -49,6 +50,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           <img
             src={imageUrl}
             alt={name}
+            loading="lazy"
             className="w-full aspect-[3/4] object-cover object-center"
           />
         </Card>
