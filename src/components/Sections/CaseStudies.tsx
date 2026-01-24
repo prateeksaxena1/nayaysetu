@@ -118,6 +118,7 @@ const CaseStudies: React.FC = () => {
                                 <div className="mt-auto pt-4 border-t border-gray-50 dark:border-gray-700 flex items-start">
                                     <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                                     <p className="text-sm font-medium text-gray-900 dark:text-gray-200">
+                                        <span className="font-bold text-gray-700 dark:text-gray-300">Outcome: </span>
                                         {feature.outcome}
                                     </p>
                                 </div>
