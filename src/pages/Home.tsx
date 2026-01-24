@@ -72,7 +72,7 @@ const Home: React.FC = () => {
       )}
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-bg-muted dark:bg-bg-dark">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-bg-muted dark:bg-bg-dark bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#374151_1px,transparent_1px)] [background-size:16px_16px]">
         {/* Abstract Background Elements */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-50"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl opacity-50"></div>
@@ -277,7 +277,7 @@ const Home: React.FC = () => {
             <div className="text-center lg:text-left">
               <FadeIn direction="up">
                 <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-poppins leading-tight">
-                  Our Track Record Spurred by <span className="text-accent">Success</span>
+                  Our Track Record of <span className="text-accent">Success</span>
                 </h2>
                 <p className="text-lg text-gray-300 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                   We don't just give advice; we deliver results. Our proven history in high-stakes property disputes speaks for itself.
