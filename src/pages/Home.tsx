@@ -27,6 +27,7 @@ import { faqs, FAQ } from '../data/faqs';
 import FAQAccordion from '../components/UI/FAQAccordion';
 
 import ReadyToTalk from '../components/UI/ReadyToTalk';
+import HeroImage from '../assets/images/hero-family.png';
 
 const Home: React.FC = () => {
   const { t } = useLanguage();
@@ -130,7 +131,7 @@ const Home: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 transform rotate-2 hover:rotate-0 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
                 <img
-                  src="https://images.pexels.com/photos/4584444/pexels-photo-4584444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src={HeroImage}
                   alt="Indian multigenerational family"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
