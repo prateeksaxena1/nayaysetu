@@ -16,7 +16,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
 
   if (variant === 'compact') {
     return (
-      <Card hoverEffect className="h-full flex flex-col overflow-hidden">
+      <Card variant="elevated" hoverEffect className="h-full flex flex-col overflow-hidden border border-gray-100 dark:border-gray-700">
         <div className="relative h-72 overflow-hidden">
           <img
             src={imageUrl}

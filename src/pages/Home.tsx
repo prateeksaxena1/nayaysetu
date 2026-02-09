@@ -27,6 +27,7 @@ import { faqs, FAQ } from '../data/faqs';
 import FAQAccordion from '../components/UI/FAQAccordion';
 
 import ReadyToTalk from '../components/UI/ReadyToTalk';
+import HeroImage from '../assets/images/hero-family.png';
 
 const Home: React.FC = () => {
   const { t } = useLanguage();
@@ -130,7 +131,7 @@ const Home: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 transform rotate-2 hover:rotate-0 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
                 <img
-                  src="https://images.pexels.com/photos/4584444/pexels-photo-4584444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src={HeroImage}
                   alt="Indian multigenerational family"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -222,7 +223,7 @@ const Home: React.FC = () => {
             {/* Grid Content Right */}
             <div className="lg:col-span-8">
               <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <StaggerItem id="widow-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group scroll-mt-32">
+                <StaggerItem id="widow-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/10 group scroll-mt-32">
                   <div className="w-14 h-14 mb-6 rounded-xl bg-primary/5 dark:bg-primary/20 text-primary dark:text-accent flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <HeartHandshake className="w-7 h-7" />
                   </div>
@@ -230,7 +231,7 @@ const Home: React.FC = () => {
                   <p className="text-text-muted dark:text-gray-400 text-sm leading-relaxed">Legal support for claiming rights in husbands' ancestral property against in-laws.</p>
                 </StaggerItem>
 
-                <StaggerItem id="daughter-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group scroll-mt-32">
+                <StaggerItem id="daughter-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/10 group scroll-mt-32">
                   <div className="w-14 h-14 mb-6 rounded-xl bg-primary/5 dark:bg-primary/20 text-primary dark:text-accent flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Users className="w-7 h-7" />
                   </div>
@@ -238,7 +239,7 @@ const Home: React.FC = () => {
                   <p className="text-text-muted dark:text-gray-400 text-sm leading-relaxed">Securing equal coparcenary rights in father's HUF property post-2005 amendment.</p>
                 </StaggerItem>
 
-                <StaggerItem id="nri-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group scroll-mt-32">
+                <StaggerItem id="nri-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/10 group scroll-mt-32">
                   <div className="w-14 h-14 mb-6 rounded-xl bg-primary/5 dark:bg-primary/20 text-primary dark:text-accent flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Plane className="w-7 h-7" />
                   </div>
@@ -246,7 +247,7 @@ const Home: React.FC = () => {
                   <p className="text-text-muted dark:text-gray-400 text-sm leading-relaxed">Managing inheritance disputes, possession, and power of attorney remotely.</p>
                 </StaggerItem>
 
-                <StaggerItem id="farmer-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 group scroll-mt-32">
+                <StaggerItem id="farmer-rights" className="flex flex-col p-8 bg-bg-muted dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/10 group scroll-mt-32">
                   <div className="w-14 h-14 mb-6 rounded-xl bg-primary/5 dark:bg-primary/20 text-primary dark:text-accent flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <Sprout className="w-7 h-7" />
                   </div>
