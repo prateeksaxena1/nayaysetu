@@ -136,14 +136,14 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white shadow-lg absolute top-full left-0 right-0 border-t">
+          <div className="lg:hidden bg-white dark:bg-gray-900 shadow-lg absolute top-full left-0 right-0 border-t dark:border-gray-700">
             <ul className="px-4 py-2">
               {navigationItems.map((item, index) => (
                 <li key={index} className="py-2">
                   {item.submenu ? (
                     <div>
                       <div
-                        className="flex items-center justify-between py-2 px-4 text-nayaysetu hover:text-nayaysetu-gold cursor-pointer"
+                        className="flex items-center justify-between py-2 px-4 text-nayaysetu dark:text-gray-200 hover:text-nayaysetu-gold cursor-pointer"
                         onClick={() => toggleSubmenu(item.name)}
                       >
                         <span className="font-medium">{item.name}</span>
@@ -156,7 +156,7 @@ const Header: React.FC = () => {
                             <li key={subIndex}>
                               <Link
                                 to={subItem.link}
-                                className="block py-2 px-4 text-sm text-nayaysetu hover:text-nayaysetu-gold"
+                                className="block py-2 px-4 text-sm text-nayaysetu dark:text-gray-200 hover:text-nayaysetu-gold"
                               >
                                 {subItem.name}
                               </Link>
@@ -168,7 +168,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       to={item.link}
-                      className={`block py-2 px-4 text-nayaysetu hover:text-nayaysetu-gold ${location.pathname === item.link ? 'font-semibold text-nayaysetu-gold' : ''
+                      className={`block py-2 px-4 text-nayaysetu dark:text-gray-200 hover:text-nayaysetu-gold ${location.pathname === item.link ? 'font-semibold text-nayaysetu-gold' : ''
                         }`}
                     >
                       {item.name}

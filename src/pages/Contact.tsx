@@ -37,36 +37,36 @@ const ContactPage: React.FC = () => {
             <div className="md:col-span-12 lg:col-span-5 space-y-8">
 
               {/* Reassurance Block */}
-              <div className="bg-bg-default p-6 rounded-xl shadow-sm border border-gray-100">
+              <div className="bg-bg-default dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
                 <h3 className="font-bold text-lg text-primary mb-6">What happens after you contact us:</h3>
                 <div className="space-y-6">
                   <div className="flex">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-nayaysetu font-bold text-sm">1</div>
+                      <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-nayaysetu dark:text-blue-200 font-bold text-sm">1</div>
                     </div>
                     <div className="ml-4">
-                      <p className="font-medium text-text-default">We review your message</p>
-                      <p className="text-sm text-text-muted">Our legal team reviews your details within 24 hours.</p>
+                      <p className="font-medium text-text-default dark:text-white">We review your message</p>
+                      <p className="text-sm text-text-muted dark:text-gray-300">Our legal team reviews your details within 24 hours.</p>
                     </div>
                   </div>
 
                   <div className="flex">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-nayaysetu font-bold text-sm">2</div>
+                      <div className="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-nayaysetu dark:text-blue-200 font-bold text-sm">2</div>
                     </div>
                     <div className="ml-4">
-                      <p className="font-medium text-gray-900">Expert Callback</p>
-                      <p className="text-sm text-gray-600">A lawyer or case manager calls you to understand your issue.</p>
+                      <p className="font-medium text-gray-900 dark:text-white">Expert Callback</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">A lawyer or case manager calls you to understand your issue.</p>
                     </div>
                   </div>
 
                   <div className="flex">
                     <div className="flex-shrink-0 mt-1">
-                      <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-sm">3</div>
+                      <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-700 dark:text-green-200 font-bold text-sm">3</div>
                     </div>
                     <div className="ml-4">
-                      <p className="font-medium text-gray-900">You decide to proceed</p>
-                      <p className="text-sm text-gray-600">No obligation to hire us. You decide only when you are comfortable.</p>
+                      <p className="font-medium text-gray-900 dark:text-white">You decide to proceed</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">No obligation to hire us. You decide only when you are comfortable.</p>
                     </div>
                   </div>
                 </div>

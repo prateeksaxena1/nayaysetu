@@ -52,17 +52,17 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission & Location */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn direction="up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h2>
+              <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 We are dedicated to protecting inheritance and ancestral rights in India.
                 We believe every family member deserves their fair share, and we fight to secure it through expert legal counsel and compassionate mediation.
               </p>
 
-              <div className="flex items-center justify-center text-gray-600 mb-12">
+              <div className="flex items-center justify-center text-gray-600 dark:text-gray-400 mb-12">
                 <MapPin className="w-5 h-5 mr-2 text-nayaysetu-gold" />
                 <span className="font-medium">Headquartered in Jaipur, serving clients across India and globally (NRIs)</span>
               </div>
